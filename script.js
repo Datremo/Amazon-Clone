@@ -1,8 +1,8 @@
 let currentImageIndex = 0;
 const bannerImages = [
-    "C:/Users/Shubham/OneDrive/Desktop/GTM Website/s1.jpg",
-    "C:/Users/Shubham/OneDrive/Desktop/GTM Website/s2.jpg",
-    "C:/Users/Shubham/OneDrive/Desktop/GTM Website/s3.jpg"
+    "Amazon-Clone/s1.jpg",
+    "Amazon-Clone/s2.jpg",
+    "Amazon-Clone/s3.jpg"
 ];
 
 // Automatically change banner image every 3 seconds
