@@ -1,0 +1,231 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.header {
+    background-color: #131A22;
+    color: white;
+    padding: 10px;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFD814;
+}
+
+.location, .account, .orders, .cart {
+    margin: 0 10px;
+}
+
+.location button, .search button {
+    background-color: #FFD814;
+    border: none;
+    padding: 2px 8px;
+    cursor: pointer;
+}
+
+.search {
+    display: flex;
+}
+
+.search input {
+    padding: 5px;
+    border: none;
+    width: 250px;
+}
+
+.nav-bar {
+    background-color: #232F3E;
+    padding: 10px 0;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+.nav-bar li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-weight: bold;
+}
+
+.nav-bar li a:hover {
+    background-color: #3a4553;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #333; /* Dark color for a professional look */
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Optional: Add a subtle underline for emphasis */
+h1::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #ffa41c; /* Amazon's orange color */
+    margin: 10px auto 0;
+}
+
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;.all-products-title {
+    color: white;
+}
+
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.header {
+    background-color: #131A22;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.all-products-title {
+    color: white;
+}
+
+/* Section Header Styles */
+main section h2 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0 10px;
+}
+
+/* Product List Styles */
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 30%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.product-card p {
+    color: #555;
+}
+
+.discount {
+    color: #d9534f;
+}
+
+.add-to-cart, .purchase button {
+    background-color: #FFD814;
+    color: #131A22;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-to-cart:hover, .purchase button:hover {
+    background-color: #f0c14b;
+}
+
+/* Purchase Button */
+.purchase {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Empty Cart Message Styles */
+.cart-empty-message {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #555; /* Subtle color for a professional look */
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+}
+
+/* Optional: Add an icon above the message */
+.cart-empty-message::before {
+    content: "🛒";
+    display: block;
+    font-size: 3em;
+    color: #ffa41c; /* Amazon-like orange color */
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-left: 5px;
+}
+
+.discount {
+    color: #d9534f; /* Red color */
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.rating {
+    color: #FFD700; /* Gold color for stars */
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
+button {
+    background-color: #FFD814;
+    color: #131A22;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #f0c14b;
+}

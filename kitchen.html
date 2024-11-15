@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Appliances</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="logo">
+                <h1>shubweb<i>.in</i></h1>
+            </div>
+            <div class="location">
+                <p id="location-text">Delivering to Mumbai 400001</p>
+                <button onclick="updateLocation()"><b>Update location</b></button>
+            </div>
+            <div class="search">
+                <input type="text" id="search-input" placeholder="Search Shubweb.in">
+                <button onclick="performSearch()">🔍</button>
+            </div>
+            <div class="account">
+                <p>Hello, sign in</p>
+                <p>Account & Lists</p>
+            </div>
+            <div class="orders">
+                <p>Returns & Orders</p>
+            </div>
+            <div class="cart">
+                <p>🛒 Cart</p>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="all.html">All</a></li>
+                <li><a href="mobiles.html">Mobiles</a></li>
+                <li><a href="kitchen.html">Kitchen Appliances</a></li>
+                <li><a href="cart.html">🛒 Cart</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+	    </header>
+        <h1>Kitchen appliances from stores near you</h1>
+    
+    <main>
+        <section id="product-list" class="product-list">
+            <!-- Product Card Template -->
+            <div class="product-card" data-name="McCoy Mixer" data-price="5660" data-image="kitchen1.jpg">
+                <img src="D:/Github/GTM Website/images/kitchen1.jpg" alt="McCoy Turbo Mixer" class="product-image">
+                <h3>McCoy Turbo 750-Watt Mixer Grinder 4 Jar (White/Blue)</h3>
+		<div class="rating">⭐⭐⭐⭐☆ (4.5)</div> <!-- Static rating for example -->
+                <p>Price: ₹5,660 <span style="text-decoration:line-through;">₹6,300</span><span class="discount"> (10% off)</span></p>
+                <button onclick="addToCart('McCoy Turbo 750-Watt Mixer Grinder 4 Jar (White/Blue)', 5660, 'kitchen1.jpg')">Add to Cart</button>
+            </div>
+            <div class="product-card" data-name="WisTec Grill" data-price="2099" data-image="kitchen2.jpg">
+                <img src="D:/Github/GTM Website/images/kitchen2.jpg" alt="WisTec Grill Sandwich Maker" class="product-image">
+                <h3>WisTec Grill Sandwich Maker 1000 Watt Panini Griller With 180° For Open And Close Grilling With Adjustable Hinges and Non Stick Coating Plate With Heat Resistance Handle (Steel) (1000 watt)</h3>
+		<div class="rating">⭐⭐⭐⭐☆ (4.0)</div> <!-- Static rating for example -->
+                <p>Price: ₹2,099 <span style="text-decoration:line-through;">₹4,500</span><span class="discount"> (53% off)</span></p>
+                <button onclick="addToCart('WisTec Grill Sandwich Maker 1000 Watt Panini Griller With 180° For Open And Close Grilling With Adjustable Hinges and Non Stick Coating Plate With Heat Resistance Handle (Steel) (1000 watt)', 2099, 'kitchen2.jpg')">Add to Cart</button>
+            </div>
+	    <div class="product-card" data-name="Usha Electric Kettle" data-price="2099" data-image="kitchen3.jpg">
+                <img src="D:/Github/GTM Website/images/kitchen3.jpg" alt="WisTec Grill Sandwich Maker" class="product-image">
+                <h3>Usha Electric Kettle 1200W | 1.5L| Cool touch handle | Wider Mouth | Food-grade stainless steel | Safety with auto cut-off function (Silver & Black)</h3>
+		<div class="rating">⭐⭐⭐⭐⭐ (5.0)</div> <!-- Static rating for example -->
+                <p>Price: ₹949 <span style="text-decoration:line-through;">₹1,240</span><span class="discount"> (23% off)</span></p>
+                <button onclick="addToCart('Usha Electric Kettle 1200W | 1.5L| Cool touch handle | Wider Mouth | Food-grade stainless steel | Safety with auto cut-off function (Silver & Black)', 2099,'kitchen3.jpg')">Add to Cart</button>
+            </div>
+
+            <!-- Add more products as needed -->
+        </section>
+    </main>
+
+    <script>
+        // Initialize dataLayer for tracking
+        window.dataLayer = window.dataLayer || [];
+
+        // Function to add item to cart
+        function addToCart(name, price, image) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price, image });
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Push add-to-cart event to dataLayer
+            dataLayer.push({
+                'event': 'addToCart',
+                'ecommerce': {
+                    'currencyCode': 'INR',
+                    'add': {
+                        'products': [{
+                            'name': name,
+                            'id': name,
+                            'price': price,
+                            'quantity': 1
+                        }]
+                    }
+                }
+            });
+
+            alert(name + " has been added to the cart!");
+        }
+    </script>
+</body>
+</html>

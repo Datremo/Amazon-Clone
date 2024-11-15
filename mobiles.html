@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobiles</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="logo">
+                <h1>shubweb<i>.in</i></h1>
+            </div>
+            <div class="location">
+                <p id="location-text">Delivering to Mumbai 400001</p>
+                <button onclick="updateLocation()"><b>Update location</b></button>
+            </div>
+            <div class="search">
+                <input type="text" id="search-input" placeholder="Search Shubweb.in">
+                <button onclick="performSearch()">🔍</button>
+            </div>
+            <div class="account">
+                <p>Hello, sign in</p>
+                <p>Account & Lists</p>
+            </div>
+            <div class="orders">
+                <p>Returns & Orders</p>
+            </div>
+            <div class="cart">
+                <p>🛒 Cart</p>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="all.html">All</a></li>
+                <li><a href="mobiles.html">Mobiles</a></li>
+                <li><a href="kitchen.html">Kitchen Appliances</a></li>
+                <li><a href="cart.html">🛒 Cart</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+	    </header>
+
+
+    <main>
+        <section>
+            <h1>Latest Mobile Phones</h1>
+              </section>
+        
+        <!-- Product Listing -->
+        <section class="product-list">
+            <!-- Sample Product Card -->
+            <div class="product-card" data-product-id="poco-m6">
+                <img src="D:/Github/GTM Website/images/iq.jpg" alt="POCO M6 5G" class="product-image">
+                <h3>POCO M6 5G (Orion Blue, 4GB RAM, 64GB Storage)</h3>
+                <p><strong>Price:</strong> ₹7,999 <span class="discount">(16% off)</span></p>
+                <button class="add-to-cart" onclick="addToCart('POCO M6 5G (Orion Blue, 4GB RAM, 64GB Storage)', 7999, 'C:D:/Github/GTM Website/images/iq.jpg')">Add to cart</button>
+            </div>
+
+            <div class="product-card" data-product-id="redmi-13c">
+                <img src="D:/Github/GTM Website/images/rm.jpg" alt="Redmi 13C 5G" class="product-image">
+                <h3>Redmi 13C 5G (Starlight Black, 4GB RAM, 128GB Storage)</h3>
+                <p><strong>Price:</strong> ₹9,199 <span class="discount">(34% off)</span></p>
+                <button class="add-to-cart" onclick="addToCart('Redmi 13C 5G (Starlight Black, 4GB RAM, 128GB Storage)', 9199, 'C:D:/Github/GTM Website/images/rm.jpg')">Add to cart</button>
+            </div>
+
+            <div class="product-card" data-product-id="iqoo-z9-lite">
+                <img src="D:/Github/GTM Website/images/pc.jpg" alt="iQOO Z9 Lite 5G" class="product-image">
+                <h3>iQOO Z9 Lite 5G (Mocha Brown, 6GB RAM, 128GB Storage)</h3>
+                <p><strong>Price:</strong> ₹11,498 <span class="discount">(26% off)</span></p>
+                <button class="add-to-cart" onclick="addToCart('iQOO Z9 Lite 5G (Mocha Brown, 6GB RAM, 128GB Storage', 11498, 'C:D:/Github/GTM Website/images/pc.jpg')">Add to cart</button>
+            </div>
+        </section>
+
+        </main>
+
+    <!-- JavaScript -->
+    <script src="script1.js"></script>
+</body>
+</html>
