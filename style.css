@@ -15,9 +15,8 @@
 
 .top-bar {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .logo h1 {
@@ -27,45 +26,35 @@
 }
 
 .location, .account, .orders, .cart {
-    margin: 5px 10px;
-    flex: 1 1 auto;
-    text-align: center;
+    margin: 0 10px;
 }
 
 .location button, .search button {
     background-color: #FFD814;
     border: none;
-    padding: 5px 10px;
+    padding: 2px 8px;
     cursor: pointer;
 }
 
 .search {
     display: flex;
-    flex: 2 1 auto;
-    margin: 10px;
 }
 
 .search input {
     padding: 5px;
     border: none;
-    width: 100%;
+    width: 250px;
 }
 
 .nav-bar {
     background-color: #232F3E;
     padding: 10px 0;
-    text-align: center;
 }
 
 .nav-bar ul {
     display: flex;
-    flex-wrap: wrap;
     list-style-type: none;
-    justify-content: center;
-}
-
-.nav-bar li {
-    margin: 5px;
+    justify-content: space-around;
 }
 
 .nav-bar li a {
@@ -82,15 +71,14 @@
 
 /* Main Content Styles */
 main {
-    padding: 10px;
+    padding: 20px;
     background-color: #f2f2f2;
 }
-
 /* Banner Styles */
 .banner {
     position: relative;
     width: 100%;
-    max-height: 300px;
+    max-height: 400px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -117,6 +105,10 @@ main {
     outline: none;
 }
 
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
 .nav-button.left {
     left: 10px;
 }
@@ -125,27 +117,26 @@ main {
     right: 10px;
 }
 
+
 .cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 20px;
-    gap: 10px;
 }
 
 .card {
     background-color: #f5f5f5;
     padding: 20px;
     border-radius: 8px;
-    width: 100%;
-    max-width: 32%;
+    width: 30%;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .card p {
@@ -154,10 +145,11 @@ main {
 
 .image-placeholder {
     width: 100%;
-    height: auto;
+    height: 300px;
     background-color: #e0e0e0;
     border-radius: 8px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .sign-in {
@@ -182,60 +174,104 @@ main {
     background-color: #232F3E;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .top-bar {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .search {
-        margin: 10px 0;
-        width: 100%;
-    }
-
-    .search input {
-        width: calc(100% - 50px);
-    }
-
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
-    }
-
-    .nav-bar ul {
-        flex-direction: column;
-    }
-
-    .nav-bar li {
-        margin: 5px 0;
-    }
-
-    .banner img {
-        max-height: 200px;
-    }
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
 }
 
-@media (max-width: 480px) {
-    .logo h1 {
-        font-size: 18px;
-    }
+/* Header Styles */
+.header {
+    background-color: #131A22;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 
-    .nav-bar ul {
-        padding: 0;
-    }
+/* Section Header Styles */
+main section h2 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0 10px;
+}
 
-    .nav-button {
-        font-size: 20px;
-        padding: 5px;
-    }
+/* Product List Styles */
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
 
-    .sign-in button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 30%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.product-card p {
+    color: #555;
+}
+
+.discount {
+    color: #d9534f;
+}
+
+.add-to-cart, .purchase button {
+    background-color: #FFD814;
+    color: #131A22;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-to-cart:hover, .purchase button:hover {
+    background-color: #f0c14b;
+}
+
+/* Purchase Button */
+.purchase {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Rating Styles */
+.rating {
+    color: #FFD700; /* Gold color for stars */
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Discount Styles */
+.discount {
+    color: #d9534f; /* Red color for discount */
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;
 }
